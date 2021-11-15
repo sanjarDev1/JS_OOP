@@ -173,5 +173,9 @@
 
 let numbers = [1, 2, 4, 6, 4, 20, 5, 3, 2, 2, 4, 5, 1, 7, 8, 5, 9, 1, 1, 1, 1, 10]
 
-let result = [...new Set(numbers)]
+// let result = [...new Set(numbers)]
+// console.log(result)
+
+let result = numbers.filter((num, index) => numbers.indexOf(num) !== index)
+
 console.log(result)
