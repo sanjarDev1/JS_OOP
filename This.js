@@ -180,7 +180,34 @@ let numbers = [1, 2, 4, 6, 4, 20, 5, 3, 2, 2, 4, 5, 1, 7, 8, 5, 9, 1, 1, 1, 1, 1
 
 // console.log(result)
 
-numbers.forEach((n, index) => {
-    console.log(`${n} => ${index} => ${numbers.indexOf(n)}`)
-})
+// numbers.forEach((n, index) => {
+//     console.log(`${n} => ${index} => ${numbers.indexOf(n)}`)
+// })
 
+var a = [['table tennis', 'tennis'], ['football', 'soccer'], ['basketball', 'valleyball']];
+console.log(a[1][1]);
+
+
+
+
+let numbers = [ 1,2,4,6,4,20,5,3,2,2,4,5,1,7,8,5,9,1,1,1,1,10]
+
+function tartiblash(arr){
+    let output = []
+    let ishora;
+    for(let i=0; i<arr.length; i++){
+        ishora = false;
+        for(let j=0; j<arr.length; j++){
+            if(arr[i] < output[j]){
+                ishora = true;
+                output.splice(j,0,arr[i])
+                break;
+            }
+        }
+        if(!ishora){
+            output.push(arr[i])
+        }
+    }
+    return output;
+}
+console.log(tartiblash(numbers))
